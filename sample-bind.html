@@ -1,0 +1,43 @@
+<div (mousemove)="move($event)">
+        <img [src]="imageUrl" 
+          (mouseenter)="mouseGoesIn()" 
+          (mouseleave)="mouseLeft()" 
+          (dblclick)="changeImg()" /><br>
+          double click the picture to change it<br>
+          The Mouse has {{mouse}}<hr>
+        <button (click)="changeImg()">Change Picture</button><hr>
+        <input (keyup)="onKeyup($event)" 
+          (keydown)="onKeydown($event)" 
+          (keypress)="keypress($event)"
+          (blur)="underTheScope($event)"
+          (focus)="underTheScope($event)">
+          {{view}}
+        <p>On key up: {{upValues}}</p>
+        <p>on key down: {{downValues}}</p>
+        <p>on key press: {{keypressValue}}</p>
+        <p (mousemove)="move($event)">
+          x coordinates: {{x}}
+          <br> y coordinates: {{y}}
+        </p>
+      </div>
+<!--{{str1 + ' ' + name}}
+<br/>-->
+<!--<img src="{{imageSrc}}" />-->
+<!--<img [src]="imageSrc" /><br/>
+<button [disabled]='isDisabled'>Try Me</button><br/>
+<button disabled='{{isDisabled}}'>Try Me</button>
+<br>
+<p>{{str2 + getLikes(likes)}}</p>
+-->
+<!--<div [class]="myCustomClass">    
+</div>
+<span [class.redText]="isTrue">Hello my blue friend</span>
+-->
+<!--
+<span [style.border]="myBorder">Hey there</span>
+
+<div [style.color]="twoColors ? 'blue' : 'forestgreen'">
+    what color am I
+</div>
+<button (click)="changeColor()">click me</button>
+-->
